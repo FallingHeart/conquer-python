@@ -1,0 +1,87 @@
+# 变量、对象、属性、方法
+
+## 变量
+
+变量是用来暂存数据的。可以随便取一个名称。但是有不同的类型。比如说：
+
+```python
+suibianyigeshuzi = 1
+suibianyigezifuchuan = '随便一个字符串'
+suibianyigeliebiao = []
+suibianyigezidian = {}
+suibianyigeshifei = False
+```
+
+## 对象
+
+对象是由```class```定义的。像这样：
+
+```python
+class Man:
+
+    def __init__(self, name, chinese_name, age, height, weight):
+        self.name = name
+        self.chinese_name = chinese_name
+        self.age = age
+        self.height = height
+        self.weight = weight
+
+    def eat(self):
+        self.weight = self.weight + 5
+        print('After %s eats something, his weight comes to %d.' % (self.name,self.weight))
+
+    def grown_up(self,year):
+        self.age = self.age + year
+        print('%d year later, the age of %s comes to %d.' % (year,self.name,self.age))
+```
+
+其中包含了两个部分。
+
+### 属性
+
+```__init__```函数的作用就是将所有传入的参数变成```Man```对象的属性。
+
+### 方法
+
+```eat```和```grown_up```两个函数的作用就是```Man```对象调用的时候可以执行一定的功能。
+
+## 获取属性、执行方法
+
+现在我们声明一个叫做```xiaomin```的变量，并将一个```Man```对象赋值给它。
+
+```python
+xiaomin = Man('Bob','小明',12,120,40)
+```
+
+这里，```Man```后面括号中的内容即是```__init__```函数中所定义的要传入的参数。
+
+```xiaomin```成为一个```Man```对象，其属性和方法就都设置好了。
+
+我们可以通过```.属性名```的方法来获取```xiaomin```的体重并打印出来。
+
+```python
+print(xiaomin.weight)
+# 40
+```
+
+也可以将```xiaomin.age```赋值给```this_year_age```再打印。
+
+```python
+this_year_age = xiaomin.age
+print(this_year_age)
+# 12
+````
+
+我们可以通过```.方法名()```来执行某种行为，例如：
+
+```python
+xiaomin.eat()
+# After Bob eats something, his weight comes to 45.
+```
+
+当然方法名后面的括号里也可以携带参数，因为其本身就是一个函数。例如：
+
+```python
+xiaomin.grown_up(5)
+# 5 years later, the age of Bob comes to 17.
+```
