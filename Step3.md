@@ -1,0 +1,58 @@
+# 条件、循环
+
+条件、循环是最简单的算法。
+
+## 条件 if
+
+不同的情况导致不同的结果。
+
+```python
+some_flag = 20 > 18
+if some_flag:
+    print('adult')
+else:
+    print('child')
+# adult
+```
+
+## 循环 for
+
+循环一般用来遍历列表或者字典。
+
+```python
+some_list = ['a','b']
+for i in some_list:
+    print(i)
+# a
+# b
+```
+
+通常情况下，我们遇到字典列表的机会比较大。例如：
+
+```python
+some_list = [
+    {'name':'xiaomin','age':12},
+    {'name':'dawang','age':20},
+]
+```
+
+打印出每个人的名字和年龄。
+
+```python
+for i in some_list:
+    print(i['name'],i['age'])
+# xiaomin 12
+# dawang 20
+```
+
+## 同时使用
+
+```python
+for i in some_list:
+    if i['age']>18 :
+        print('%s is an adult.' % i['name'])
+    else:
+        print('%s is a child.' % i['name'])
+# xiaomin is a child.
+# dawang is an adult.
+```
