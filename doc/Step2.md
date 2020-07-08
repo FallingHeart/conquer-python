@@ -1,24 +1,75 @@
-# 元组、列表、字典
+# 对象、属性、方法
 
-元组、列表、字典是最简单的数据结构。
+## 对象
 
-## 元组()
-
-元组是可以看做是不可变的列表，在赋值及字符串模板中特别好用。
+对象是由```class```定义的。像这样：
 
 ```python
-some_tuple = (6,'7')
-a,b = some_tuple
-print(a)
-print(b)
-# 6
-# 7
-print('digit %d str %s' % some_tuple)
-# digit 6 str 7
+class Man:
+
+    def __init__(self, name, chinese_name, age, height, weight):
+        self.name = name
+        self.chinese_name = chinese_name
+        self.age = age
+        self.height = height
+        self.weight = weight
+
+    def eat(self):
+        self.weight = self.weight + 5
+        print('After %s eats something, his weight comes to %d.' % (self.name,self.weight))
+
+    def grown_up(self,year):
+        self.age = self.age + year
+        print('%d year later, the age of %s comes to %d.' % (year,self.name,self.age))
 ```
 
-## 列表[]
+其中包含了两个部分。
 
-列表一般用来存放同类型数据，存放不同类型的推荐使用字典。
+### 属性
 
-## 字典{}
+```__init__```函数的作用就是将所有传入的参数变成```Man```对象的属性。
+
+### 方法
+
+```eat```和```grown_up```两个函数的作用就是```Man```对象调用的时候可以执行一定的功能。
+
+## 获取属性、执行方法
+
+现在我们声明一个叫做```xiaomin```的变量，并将一个```Man```对象赋值给它。
+
+```python
+xiaomin = Man('Bob','小明',12,120,40)
+```
+
+这里，```Man```后面括号中的内容即是```__init__```函数中所定义的要传入的参数。
+
+```xiaomin```成为一个```Man```对象，其属性和方法就都设置好了。
+
+我们可以通过```.属性名```的方法来获取```xiaomin```的体重并打印出来。
+
+```python
+print(xiaomin.weight)
+# 40
+```
+
+也可以将```xiaomin.age```赋值给```this_year_age```再打印。
+
+```python
+this_year_age = xiaomin.age
+print(this_year_age)
+# 12
+````
+
+我们可以通过```.方法名()```来执行某种行为，例如：
+
+```python
+xiaomin.eat()
+# After Bob eats something, his weight comes to 45.
+```
+
+当然方法名后面的括号里也可以携带参数，因为其本身就是一个函数。例如：
+
+```python
+xiaomin.grown_up(5)
+# 5 years later, the age of Bob comes to 17.
+```

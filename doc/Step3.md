@@ -1,58 +1,24 @@
-# 条件、循环
+# 元组、列表、字典
 
-条件、循环是最简单的算法。
+元组、列表、字典是最简单的数据结构。
 
-## 条件 if
+## 元组()
 
-不同的情况导致不同的结果。
-
-```python
-some_flag = 20 > 18
-if some_flag:
-    print('adult')
-else:
-    print('child')
-# adult
-```
-
-## 循环 for
-
-循环一般用来遍历列表或者字典。
+元组是可以看做是不可变的列表，在赋值及字符串模板中特别好用。
 
 ```python
-some_list = ['a','b']
-for i in some_list:
-    print(i)
-# a
-# b
+some_tuple = (6,'7')
+a,b = some_tuple
+print(a)
+print(b)
+# 6
+# 7
+print('digit %d str %s' % some_tuple)
+# digit 6 str 7
 ```
 
-通常情况下，我们遇到字典列表的机会比较大。例如：
+## 列表[]
 
-```python
-some_list = [
-    {'name':'xiaomin','age':12},
-    {'name':'dawang','age':20},
-]
-```
+列表一般用来存放同类型数据，存放不同类型的推荐使用字典。
 
-打印出每个人的名字和年龄。
-
-```python
-for i in some_list:
-    print(i['name'],i['age'])
-# xiaomin 12
-# dawang 20
-```
-
-## 同时使用
-
-```python
-for i in some_list:
-    if i['age']>18 :
-        print('%s is an adult.' % i['name'])
-    else:
-        print('%s is a child.' % i['name'])
-# xiaomin is a child.
-# dawang is an adult.
-```
+## 字典{}
