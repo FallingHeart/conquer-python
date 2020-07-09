@@ -1,5 +1,5 @@
-some_flag = 20 > 18
-if some_flag:
+age = 20
+if age >= 18:
     print('adult')
 else:
     print('child')
