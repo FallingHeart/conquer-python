@@ -6,11 +6,11 @@ No reason.
 
 ## Basic Concept
 
-Step 1 - [变量、函数](./doc/step/1.md "Step 1")
+Step 1 - [变量、赋值、函数](./doc/step/1.md "Step 1")
 
 Step 2 - [对象、属性、方法](./doc/step/2.md "Step 2")
 
-Step 3 - [元组、列表、集合、字典](./doc/step/3.md "Step 3")
+Step 3 - [元组、列表、字典](./doc/step/3.md "Step 3")
 
 Step 4 - [运算、条件、循环](./doc/step/4.md "Step 4")
 
