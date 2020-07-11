@@ -22,18 +22,17 @@ print(c)
 
 import requests
 # requests模块中有一个名为get的函数，其接收一个网址作为参数，返回一个response对象
-r = requests.get('https://www.douban.com/') # 豆瓣首页
+r = requests.get(url='https://www.baidu.com/') # 百度首页
 # 打印response对象的status_code,encoding属性
 print(r.status_code,r.encoding)
-# 200 'utf-8'
-# 打印response对象的text属性
+# 200 ISO-8859-1
+# 打印response对象的text,content属性
 print(r.text)
-# '<!DOCTYPE HTML>\n<html>\n<head>\n<meta name="description" content="提供图书、电影、音乐唱片的推荐、评论和...'
-# 打印response对象的content属性
 print(r.content)
-# b'<!DOCTYPE html>\n<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8">\n...'
+# '<!DOCTYPE html><!--STATUS OK--><html> <head><meta http-equiv=content-type content=text/html;charset=utf-8>...'
+# b'<!DOCTYPE html>\r\n<!--STATUS OK--><html> <head><meta http-equiv=content-type content=text/html;charset=utf-8>...'
 # 对于诸如json之类特定类型的响应，可以通过执行response对象的json()方法直接获取
-r = requests.get('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20%3D%202151330&format=json')
+r = requests.get('https://market.douban.com/api/v2/cart/quantity')
 json_content = r.json()
 print(json_content)
-#{'query': {'count': 1, 'created': '2017-11-17T07:14:12Z', ...
+# {'r': 1, 'error': '需要登录'}
