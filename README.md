@@ -12,7 +12,7 @@ Step 2 - [对象、属性、方法](./doc/step/2.md "Step 2")
 
 Step 3 - [元组、列表、字典](./doc/step/3.md "Step 3")
 
-Step 4 - [运算、条件、循环](./doc/step/4.md "Step 4")
+Step 4 - [运算、分支、循环](./doc/step/4.md "Step 4")
 
 Step 5 - [模块、第三方库](./doc/step/5.md "Step 5")
 
