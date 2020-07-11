@@ -6,16 +6,16 @@ print(length_of_str)
 my_print = print
 my_print('i am print func now')
 
-def dayinyijuhua():
-    print('this is function dayinyijuhua')
+def print_a_sentence():
+    print('this is a sentence')
 
-dayinyijuhua()
+print_a_sentence()
 
 
-def fanhuiyigezhi():
-    return 'this is a function'
+def return_a_value():
+    return 'this is a value'
 
-some_str = fanhuiyigezhi()
+some_str = return_a_value()
 print(some_str)
 
 
