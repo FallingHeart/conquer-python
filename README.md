@@ -14,7 +14,7 @@ Step 3 - [元组、列表、字典](./doc/step/3.md "Step 3")
 
 Step 4 - [运算、分支、循环](./doc/step/4.md "Step 4")
 
-Step 5 - [模块、第三方库](./doc/step/5.md "Step 5")
+Step 5 - [模块、三方、自建](./doc/step/5.md "Step 5")
 
 ## Complete Example
 

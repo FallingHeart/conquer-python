@@ -1,14 +1,3 @@
-# 模块、三方、自建
-
-随着代码量的增加，尽管已经在function的粒度做到了小而美。修改和维护代码依然显得举步维艰。甚至很多初学者一开始就有这个烦恼。这时我们就可以通过模块更好的组织我们的代码。
-
-## 内建模块
-
-我们以```collections```为例介绍一下python内建模块的基本使用。
-
-内建模块不需要安装，直接```import```就可以使用。
-
-```python
 # import collections
 # collections太大了，我们引入其中的Counter就可以了
 from collections import Counter
@@ -30,21 +19,7 @@ c.update('hello')
 # 查看更新后的结果
 print(c)
 # Counter({'r': 2, 'o': 2, 'g': 2, 'm': 2, 'l': 2, 'p': 1, 'a': 1, 'i': 1, 'n': 1, 'h': 1, 'e': 1})
-```
 
-这个模块帮你做的就是让你可以轻易的统计一个字符串中每个字符出现的次数，当然还有很多别的功能，比如还可传入一个list，对其进行统计并按照出现次数降序进行排列。详情可以查看文档进行学习。
-
-## 第三方库
-
-我们以```requests```为例介绍一下第三方库的基本使用。
-
-第三方库都需要安装才可以引入使用。
-
-```shell
-pip install requests
-```
-
-```python
 import requests
 # requests模块中有一个名为get的函数，其接收一个网址作为参数，返回一个response对象
 r = requests.get('https://www.douban.com/') # 豆瓣首页
@@ -58,14 +33,7 @@ print(r.text)
 print(r.content)
 # b'<!DOCTYPE html>\n<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8">\n...'
 # 对于诸如json之类特定类型的响应，可以通过执行response对象的json()方法直接获取
-r = requests.get('https://market.douban.com/api/v2/cart/quantity')
+r = requests.get('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20%3D%202151330&format=json')
 json_content = r.json()
 print(json_content)
-# {"r": 0, "data": {"quantity": 0}}
-```
-
-这个模块帮你做的就是让你轻而易举地发送网络请求，并把返回值包装成了一个response对象供你差遣。
-
-## 自建
-
-本着不重新发明轮子的忠告，我们通过以上两种途径都没有找到合适的解决方案时才会决定自己编写模块。当然，开发一些小的功能，实用的小工具，创新或者弥补现有模块的不足，将会是非常有益的补充。
+#{'query': {'count': 1, 'created': '2017-11-17T07:14:12Z', ...
