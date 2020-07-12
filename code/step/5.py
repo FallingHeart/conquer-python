@@ -1,8 +1,9 @@
 # import collections
 # collections太大了，我们引入其中的Counter就可以了
 from collections import Counter
-# Counter像Man一样是一个对象，所以需要带括号
+# Counter像Man一样是一个类，所以后面需要带括号来进行实例化
 c = Counter()
+# 现在c是一个Counter对象了
 for i in 'programming':
     c[i] = c[i] + 1
     # 这里的i代表着遍历每个字符，当它是'p'的时候

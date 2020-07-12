@@ -14,8 +14,8 @@ some_list = [
     {'name':'dawang','age':20},
 ]
 
-for i in some_list:
-    print(i['name'],i['age'])
+for person in some_list:
+    print(person['name'],person['age'])
 
 for i in some_list:
     if i['age']>18 :
