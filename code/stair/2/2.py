@@ -1,5 +1,31 @@
-import numpy as np 
+from bs4 import BeautifulSoup
 
-arr = np.array([1, 2, 3, 4, 5]) 
+html_doc = """
+<html><head><title>The Dormouse's story</title></head>
+<body>
+<p class="title"><b>The Dormouse's story</b></p>
 
-print(arr)
+<p class="story">Once upon a time there were three little sisters; and their names were
+<a href="http://example.com/elsie" class="sister" id="link1">Elsie</a>,
+<a href="http://example.com/lacie" class="sister" id="link2">Lacie</a> and
+<a href="http://example.com/tillie" class="sister" id="link3">Tillie</a>;
+and they lived at the bottom of a well.</p>
+
+<p class="story">...</p>
+"""
+
+soup = BeautifulSoup(html_doc, 'html.parser')
+
+print(soup.prettify())
+
+
+some_list = soup.find_all('a')
+
+print(some_list)
+
+name_list = []
+for i in some_list:
+    name = i.text
+    name_list.append(name)
+
+print(name_list)
