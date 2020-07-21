@@ -16,17 +16,17 @@ Step 4 - [运算、分支、循环](./doc/step/4.md "Step 4")
 
 Step 5 - [模块、三方、自建](./doc/step/5.md "Step 5")
 
-## Complete Example
+## Complete Flow
 
 Stair 1 - [数据获取](./doc/stair/1.md "Stair 1")
 
-Stair 2 - [数据处理](./doc/stair/2.md "Stair 2")
+Stair 2 - [数据清洗](./doc/stair/2.md "Stair 2")
 
-Stair 3 - [数据持久化](./doc/stair/3.md "Stair 3")
+Stair 3 - [数据储存](./doc/stair/3.md "Stair 3")
 
 Stair 4 - [数据分析](./doc/stair/4.md "Stair 4")
 
-Stair 5 - [数据可视化](./doc/stair/5.md "Stair 5")
+Stair 5 - [数据呈现](./doc/stair/5.md "Stair 5")
 
 ## Brave New World
 
