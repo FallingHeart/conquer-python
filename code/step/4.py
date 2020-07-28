@@ -10,7 +10,7 @@ for i in some_list:
     print(i)
 
 some_list = [
-    {'name':'xiaomin','age':12},
+    {'name':'xiaoming','age':12},
     {'name':'dawang','age':20},
 ]
 

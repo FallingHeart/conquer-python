@@ -15,13 +15,13 @@ class Man:
         self.age = self.age + year
         print('%d year later, the age of %s comes to %d.' % (year,self.name,self.age))
 
-xiaomin = Man('Bob','小明',12,120,40)
+xiaoming = Man('Bob','小明',12,120,40)
 
-print(xiaomin.weight)
+print(xiaoming.weight)
 
-this_year_age = xiaomin.age
+this_year_age = xiaoming.age
 print(this_year_age)
 
-xiaomin.eat()
+xiaoming.eat()
 
-xiaomin.grown_up(5)
+xiaoming.grown_up(5)
