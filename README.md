@@ -28,6 +28,16 @@ Stair 4 - [数据分析](./doc/stair/4.md "Stair 4")
 
 Stair 5 - [数据呈现](./doc/stair/5.md "Stair 5")
 
+## Simple Case
+
+Practice 1 - [微博文案爬取](./doc/practice/1.md "Practice 1")
+
+Practice 2 - [微博文案分析](./doc/practice/2.md "Practice 2")
+
+Practice 3 - [微博评论爬取](./doc/practice/3.md "Practice 3")
+
+Practice 4 - [微博评论分析](./doc/practice/4.md "Practice 4")
+
 ## Brave New World
 
 And welcome.
